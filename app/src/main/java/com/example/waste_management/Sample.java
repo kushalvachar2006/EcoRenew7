@@ -95,7 +95,7 @@ public class Sample extends AppCompatActivity {
        FirebaseAuth.getInstance().signOut();
 //        String accessToken = getStoredGitHubToken(); // Retrieve the stored token
 //        if (accessToken != null) {
-//            revokeGitHubToken("Ov23liMe0trIKrKn1uWD","8ea1cca4247a391f1331ac3b4fcdb3cadf54f0cb","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");
+//
 //        }
 //
 //        mAuth.signOut(); // Firebase logout
