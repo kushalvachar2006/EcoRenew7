@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212121"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo1"
+        android:layout_width="500px"
+        android:layout_height="500px"
+        android:layout_marginLeft="118dp"
+        android:layout_marginTop="230dp"
+        android:background="@drawable/logo1"
+        android:backgroundTint="@color/white"
+        android:transitionName="img" />
+
+    <ImageView
+        android:id="@+id/logo_name"
+        android:layout_width="212dp"
+        android:layout_height="67dp"
+        android:layout_below="@id/logo1"
+        android:layout_marginLeft="118dp"
+        android:background="@drawable/logo_name"
+        android:backgroundTint="@color/white"
+        android:transitionName="img" />
+
+
+<!--    <TextView-->
+<!--        android:layout_below="@id/logo1"-->
+<!--        android:paddingTop="10dp"-->
+<!--        android:id="@+id/txt1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textStyle="bold"-->
+<!--        android:fontFamily="@font/oswald_variable_font_wght"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:text="WASTE_MANAGER"-->
+
+<!--        android:textSize="30dp"-->
+<!--        android:layout_centerInParent="true" />-->
+
+
+
+</RelativeLayout>
