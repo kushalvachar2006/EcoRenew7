@@ -6,12 +6,13 @@ pluginManagement {
     }
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS) // Allow project-level repositories
     repositories {
         google()
         mavenCentral()
+
     }
 }
 
 rootProject.name = "Waste_Management"
-include ':app'
+include ':app', ':Object_Detection'

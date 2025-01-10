@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Signin">
+    tools:context=".Signin_user">
 
 
 
@@ -120,36 +120,18 @@
                 android:gravity="center"
                 android:id="@+id/icons"
                 android:layout_below="@id/or_login_with">
-                <ImageButton
+                <Button
                     android:id="@+id/google"
-                    android:layout_width="34dp"
-                    android:layout_height="34dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/google" />
-                <ImageButton
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/github"
-                    android:layout_toRightOf="@id/google"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/github"/>
-                <ImageButton
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:id="@+id/linkedin"
-                    android:layout_marginLeft="10dp"
-                    android:layout_toRightOf="@id/github"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/linkedin"/>
-                <ImageButton
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/microsoft"
-                    android:layout_toRightOf="@id/linkedin"
-                    android:background="@drawable/microsoft"/>
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/customedittextstyle"
+                    android:drawableLeft="@drawable/google1"
+                    android:drawablePadding="8dp"
+                    android:paddingStart="12dp"
+
+                    android:padding="12dp"
+                    android:text="Sign up using Google"
+                    android:textColor="#000000" />
             </RelativeLayout>
 
             <TextView

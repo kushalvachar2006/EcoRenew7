@@ -1,9 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Choice_Activity">
+    <ImageView
+        android:id="@+id/choice_img"
+        android:layout_width="161dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo2"
+        android:transitionName="sharedImage" />
+    <TextView
+        android:layout_below="@id/choice_img"
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Are you a USER or TRADER?"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/user.png"
+        android:layout_width="151dp"
+        android:layout_height="145dp"
+        android:layout_below="@+id/text1"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#414141"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/user" />
+    <TextView
+        android:id="@+id/usertxt"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/user.png"
+        android:layout_centerHorizontal="true"
+        android:text="USER"
+        android:textStyle="bold"
+        android:textColor="#414141"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"/>
+    <Button
+        android:id="@+id/userbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/usertxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="SIGNIN"
+        android:background="@drawable/customedittextstyle"/>
+
+    <ImageView
+        android:id="@+id/trader.png"
+        android:layout_width="151dp"
+        android:layout_height="145dp"
+        android:layout_below="@+id/userbtn"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#414141"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/trader" />
+    <TextView
+        android:id="@+id/tradertxt"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/trader.png"
+        android:layout_centerHorizontal="true"
+        android:text="TRADER"
+        android:textColor="#414141"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"/>
+    <Button
+        android:id="@+id/traderbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/tradertxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="SIGNIN"
+        android:background="@drawable/customedittextstyle"/>
+
+
+
+</RelativeLayout>

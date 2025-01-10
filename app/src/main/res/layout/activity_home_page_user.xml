@@ -1,22 +1,369 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home_Page">
+    android:id="@+id/drawer_layout"
+    tools:context=".Home_Page_user">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Hello world"
-        android:textSize="30dp"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sign out"
-        android:id="@+id/sign_out"
-        android:layout_centerVertical="true"/>
+    <!-- Main Content (Your Existing Layout) -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-</RelativeLayout>
+        <!-- Navbar -->
+        <LinearLayout
+            android:id="@+id/navbar"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="#212121">
+
+            <!-- Logo -->
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="57dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/white"
+                android:background="@drawable/logo1" />
+
+            <!-- Spacer -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Welcome to EcoRenew"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:layout_weight="1" />
+
+            <!-- User's Profile Photo -->
+            <ImageButton
+                android:id="@+id/navbar_user_photo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/user"
+                android:backgroundTint="@color/white"
+                android:contentDescription="User Profile Photo"
+                android:clipToOutline="true"
+                android:backgroundTintMode="src_in" />
+        </LinearLayout>
+
+        <!-- Content Area -->
+        <FrameLayout
+            android:id="@+id/contentFrame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/navbar" />
+<!--        <TextView-->
+<!--            android:id="@+id/rewardButton"-->
+<!--            android:layout_width="350dp"-->
+<!--            android:layout_height="150dp"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_below="@id/navbar"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:background="@drawable/rounded_button_background"-->
+<!--            android:gravity="start"-->
+<!--            android:paddingStart="10dp"-->
+<!--            android:shadowColor="#ffffff"-->
+<!--            android:shadowDx="5"-->
+<!--            android:shadowDy="5"-->
+<!--            android:shadowRadius="3"-->
+<!--            android:paddingTop="10dp"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textAppearance="@font/ostwald_font"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:elevation="8dp"-->
+<!--            android:backgroundTint="#FDD835" />-->
+        <LinearLayout
+            android:id="@+id/layout1"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:padding="16dp"
+            android:layout_below="@id/navbar"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_button_background">
+
+
+            <TextView
+                android:id="@+id/rewards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rewards earned:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp" />
+
+            <!-- Membership Type Section -->
+            <TextView
+                android:id="@+id/validity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Valid for 1-year"
+                android:textColor="#000000"
+                android:textStyle="italic"
+                android:textSize="12dp"
+                android:layout_marginTop="16dp" />
+
+            <!-- Membership Description -->
+            <TextView
+                android:id="@+id/rewards_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No rewards earned yet!!"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="2dp" />
+            <TextView
+                android:id="@+id/rewards_details_to_earn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sell your plastic waste today and earn rewards while contributing to a cleaner, greener planet! ♻️"
+                android:textColor="#666666"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline1"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="2dp" />
+        </LinearLayout>
+
+<!--        Store's layout-->
+        <LinearLayout
+            android:id="@+id/layout2"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:padding="16dp"
+            android:layout_below="@id/layout1"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#FF8DB7"
+            android:background="@drawable/rounded_button_background">
+
+
+            <TextView
+                android:id="@+id/stores"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nearby Stores:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp" />
+
+
+
+
+            <TextView
+                android:id="@+id/location_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="You can find nearby stores quickly by clicking the button below—just enable location services and start your search!"
+                android:textColor="#666666"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline1"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="2dp" />
+            <Button
+                android:id="@+id/clickhere"
+                android:layout_marginTop="10dp"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:background="@drawable/customedittextstyle"
+                android:text="Click here"
+                android:textAlignment="center"
+                android:textSize="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout3"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:padding="16dp"
+            android:layout_below="@id/layout2"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#8CEBF6"
+            android:background="@drawable/rounded_button_background">
+
+            <TextView
+                android:id="@+id/lead_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LeaderBoard:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp" />
+
+            <!-- Placeholder TextView -->
+            <TextView
+                android:id="@+id/empty_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Be the first to earn rewards and be at the top!!"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:padding="16dp"
+                android:textColor="#888888"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                android:textStyle="bold"
+                /> <!-- Initially hidden -->
+
+            <!-- RecyclerView for displaying leaderboard items -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/leaderboard_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp" />
+
+        </LinearLayout>
+
+
+
+
+
+        <ImageButton
+            android:id="@+id/camera"
+            android:layout_width="69dp"
+            android:layout_height="66dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/circle_background"
+            android:backgroundTint="#000000"
+            android:src="@drawable/camera_icon"
+            app:tint="@color/white" />
+
+    </RelativeLayout>
+
+    <!-- Navigation Drawer -->
+    <LinearLayout
+        android:id="@+id/navDrawer"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Profile Section -->
+        <LinearLayout
+            android:id="@+id/profile_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <!-- User's Profile Picture -->
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/user"
+                android:scaleType="centerCrop"
+                android:clipToOutline="true"
+                android:contentDescription="User Profile Picture" />
+
+            <!-- User Info -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp">
+
+                <!-- User's Name -->
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Guest"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black" />
+
+                <!-- User's Email -->
+                <TextView
+                    android:id="@+id/user_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not logged in"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/darker_gray" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <!-- Other Navigation Options -->
+        <Button
+            android:id="@+id/profile_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textSize="16sp"
+            android:gravity="start"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/white"
+            android:padding="12dp"
+            android:elevation="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textSize="18sp"
+            android:gravity="start"
+            android:padding="16dp"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Help"
+            android:textSize="18sp"
+            android:gravity="start"
+            android:padding="16dp"
+            android:textColor="@android:color/black" />
+
+        <!-- Sign-Out Button -->
+        <Button
+            android:id="@+id/sign_out"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign Out"
+            android:textSize="16sp"
+            android:gravity="start"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/white"
+            android:padding="12dp"
+            android:elevation="4dp" />
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
