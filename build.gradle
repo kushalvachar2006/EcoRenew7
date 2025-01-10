@@ -1,19 +1,11 @@
 buildscript {
     dependencies {
-        classpath 'com.google.gms:google-services:4.4.2'
-        classpath "com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:2.0.1"
-        classpath 'com.android.tools.build:gradle:8.3.0-alpha03'
-    }
-
-    repositories {
-        google()
-        mavenCentral()
+        classpath("com.google.gms:google-services:4.4.2")
     }
 }
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
 
-plugins {
+plugins{
     alias(libs.plugins.androidApplication) apply false
 }
-
-
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+true
